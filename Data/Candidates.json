@@ -1,0 +1,19 @@
+{
+  "candidates": [
+    {
+      "candidateName": "Nicolás Maduro",
+      "partyOrAlliance": "Great Patriotic Pole(PSUV)",
+      "votes": 5150092
+    },
+    {
+      "candidateName": "Edmundo González",
+      "partyOrAlliance": "Unitary Platform (Independent)",
+      "votes": 4445978
+    },
+    {
+      "candidateName": "Other",
+      "partyOrAlliance": "All Other",
+      "votes": 462704
+    }
+  ]
+}

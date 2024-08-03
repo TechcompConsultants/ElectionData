@@ -1,0 +1,33 @@
+﻿<Window x:Class="ElectionData.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <ListView ItemsSource="{Binding Candidates}" 
+                  ItemContainerStyle="{StaticResource AlternatingRowStyle}" 
+                  AlternationCount="2">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Candidate" DisplayMemberBinding="{Binding CandidateName}" Width="150"/>
+                    <GridViewColumn Header="Party or Alliance" DisplayMemberBinding="{Binding PartyOrAlliance}" Width="200"/>
+                    <GridViewColumn Header="Votes" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Votes, StringFormat='{}{0:N0}'}" 
+                                           HorizontalAlignment="Right" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Percent" Width="150">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding FormattedPercentage}" 
+                                           HorizontalAlignment="Right" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
