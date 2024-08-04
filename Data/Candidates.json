@@ -3,53 +3,17 @@
     {
       "candidateName": "Nicolás Maduro",
       "partyOrAlliance": "Great Patriotic Pole(PSUV)",
-      "votes": 6408844
+      "votes": 5150092
     },
     {
       "candidateName": "Edmundo González",
       "partyOrAlliance": "Unitary Platform (Independent)",
-      "votes": 5326104
+      "votes": 4445978
     },
     {
-      "candidateName": "Luis Eduardo Martínez",
-      "partyOrAlliance": "Democratic Action",
-      "votes": 152360
-    },
-    {
-      "candidateName": "Antonio Ecarri",
-      "partyOrAlliance": "Pencil Alliance",
-      "votes": 116421
-    },
-    {
-      "candidateName": "Benjamín Rausseo",
-      "partyOrAlliance": "National Democratic Confederation",
-      "votes": 92903
-    },
-    {
-      "candidateName": "José Brito",
-      "partyOrAlliance": "Venezuela First",
-      "votes": 84231
-    },
-    {
-      "candidateName": "Javier Bertucci",
-      "partyOrAlliance": "Hope for Change",
-      "votes": 64452
-    },
-    {
-      "candidateName": "Claudio Fermín",
-      "partyOrAlliance": "Solutions for Venezuela",
-      "votes": 40902
-    },
-    {
-      "candidateName": "Enrique Márquez",
-      "partyOrAlliance": "Centrados en la Gente",
-      "votes": 29611
-    },
-    {
-      "candidateName": "Daniel Ceballos",
-      "partyOrAlliance": "Country Renewal and Hope Assembly",
-      "votes": 20056
+      "candidateName": "All Other Parties",
+      "partyOrAlliance": "Other",
+      "votes": 462704
     }
   ]
 }
-

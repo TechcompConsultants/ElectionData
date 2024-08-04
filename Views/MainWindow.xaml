@@ -1,7 +1,8 @@
 ﻿<Window x:Class="ElectionData.Views.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="400" Width="646">
+        Title="MainWindow" Height="235" Width="646"
+        DataContextChanged="MainWindow_DataContextChanged">
     <StackPanel>
         <!-- StackPanel to organize the ListView and the Button -->
         <Button Content="Reload Data" Margin="10"
@@ -33,6 +34,31 @@
                     </GridView>
                 </ListView.View>
             </ListView>
+        </Grid>
+        <!-- Grid to arrange total votes, registered voters, and percentage of votes -->
+        <Grid Margin="10" HorizontalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="{Binding TotalVotes, StringFormat='Total Votes: {0:N0}'}" 
+                       Grid.Row="0" FontWeight="Bold" HorizontalAlignment="Right"/>
+            <TextBlock Text="Registered Voters: 21,392,464" 
+                       Grid.Row="1" FontWeight="Bold" HorizontalAlignment="Right"/>
+            <TextBlock Text="{Binding TotalVotesPercentage, StringFormat='Percentage of Votes: {0:F2}%'}" 
+                       Grid.Row="2" FontWeight="Bold" HorizontalAlignment="Right"/>
+        </Grid>
+        <!-- Footer Grid to manage spacing -->
+        <Grid Margin="10" HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="FooterTextBlock" Text="How not to falsify the election results 101." 
+                       Grid.Row="0"  HorizontalAlignment="Center" FontWeight="Bold" Visibility="Collapsed"/>
+            <TextBlock x:Name="FooterNoteTextBlock" Text="The likelihood of these percents occurring naturally with a 5 decimal place precision is roughly one in 100 million." 
+                       Grid.Row="1"  HorizontalAlignment="Center" FontWeight="Normal" Visibility="Collapsed"/>
         </Grid>
     </StackPanel>
 </Window>
