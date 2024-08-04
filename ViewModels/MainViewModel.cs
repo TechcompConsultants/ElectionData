@@ -25,7 +25,7 @@ namespace ElectionData.ViewModels
             LoadData();
         }
 
-        private void LoadData()
+        public void LoadData()
         {
             var jsonFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\Data", "candidates.json");
             var json = File.ReadAllText(jsonFilePath);
@@ -35,7 +35,7 @@ namespace ElectionData.ViewModels
             {
                 // Update property type and calculation
                 candidate.Percentage = (decimal)candidate.Votes / totalVotes;
-                decimal precisePercentage = Math.Round(candidate.Percentage * 100, 6);
+                decimal precisePercentage = Math.Round(candidate.Percentage * 100, 5);
                 candidate.FormattedPercentage = precisePercentage.ToString("F6", CultureInfo.InvariantCulture);
             }
             Candidates = new ObservableCollection<Candidate>(candidatesList.Candidates);
